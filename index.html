@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Library</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Library</h1>
+
+    <button class="btn-open" onclick="openForm()">Open</button>
+
+    <div class="form-popup" id="myForm">
+      <form class="form-container">
+        <div class="form-title">
+          <label for="title-input">Book Title</label>
+          <input type="text" class="title-input"  placeholder="Name of Title">
+        </div>
+        <div class="form-author">
+          <label for="author-input">Book Author</label>
+          <input type="text" class="author-input"  placeholder="Name of Author">
+        </div>
+        <div class="form-pages">
+          <label for="pages-input">Book Total Pages</label>
+          <input type="number" class="pages-input" placeholder="Number of Pages">
+        </div>
+        <div class="form-read">
+          <label for="read-input">Read</label>
+          <input type="text" class="read-input" placeholder="Enter Y or N">
+        </div>
+      </form>
+
+      <button type="submit" class="btn-close" onclick="closeForm()">Close</button>
+
+      <button type='submit' class="btn-add">Add Book</button>
+
+    </div>
+
+    
+
+    
+
+
+    <section class="books-display">
+      
+    </section>
+    
+    <script src="script.js" async defer></script>
+  </body>
+</html>
