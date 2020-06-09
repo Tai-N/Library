@@ -15,6 +15,7 @@ function render() {
     <p>${book.author}</p>
     <p>${book.pages}</p>
     <p>${book.read}</p>
+    <button class='btn-toggle-read' value=${index}>Read</button>
     <button class='btn-delete' value=${index}>Delete</button>
 </div>`;
 
@@ -27,7 +28,18 @@ display.addEventListener("click", (e) => {
     let deleteBtn = e.target;
     deleteBook(deleteBtn.value);
   }
+
+  if (e.target.classList.contains("btn-toggle-read")) {
+    let toggleBtn = e.target;
+    toggleRead(toggleBtn.value);
+  }
 });
+
+function toggleRead(index) {
+  let book = myLibrary[index];
+  book.read = book.read === "Y" ? "N" : "Y";
+  render();
+}
 
 function deleteBook(index) {
   myLibrary.splice(index, 1);
